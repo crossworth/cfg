@@ -1,53 +1,3 @@
-### CFG Parser
-
-A CFG parser compatible with **altV**.
-
-
-Example CFG file.
-
-```
-name: "TestServer",
-host: "0.0.0.0",
-port: 7788,
-players: 1024,
-#password: "verysecurepassword", # remove hashtag before password to enable
-announce: false, # set to false during development
-#token: no-token, # only needed when announce: true
-gamemode: "Freeroam",
-website: "test.com",
-language: "en",
-description: "test",
-debug: false, # set to true during development
-useEarlyAuth: true,
-earlyAuthUrl: 'https://login.example.com:PORT',
-useCdn: true,
-cdnUrl: 'https://cdn.example.com:PORT',
-modules: [
-  "node-module",
-  "csharp-module"
-],
-resources: [
-  "example"
-],
-tags: [ 
-  "customTag1",
-  "customTag2",
-  "customTag3",
-  "customTag4"
-],
-voice: {
-  bitrate: 64000
-  #externalSecret: 3499211612
-  externalHost: localhost
-  externalPort: 7798
-  externalPublicHost: 94.19.213.159
-  externalPublicPort: 7799
-}
-```
-
-
-#### How to use this library
-```go
 package main
 
 import (
@@ -98,4 +48,3 @@ func main() {
 
 	fmt.Printf("%+v", example)
 }
-```
